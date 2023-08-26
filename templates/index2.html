@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>欢迎来到我的项目</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333333;
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 2px 2px #cccccc;
+        }
+
+        p {
+            color: #666666;
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            background-color: #333333;
+            padding: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .menu li {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom-color 0.3s ease-in-out;
+        }
+
+        .menu li a:hover {
+            border-bottom-color: #ffffff;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+            margin-bottom: 40px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 30px;
+            border-collapse: collapse;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        th {
+            background-color: #333333;
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333333;
+            text-align: center;
+            text-shadow: 2px 2px #cccccc;
+        }
+
+        .contact-info {
+            margin-top: 40px;
+            text-align: center;
+            color: #666666;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <img src="logo.png" alt="Logo" class="logo"> -->
+        <img src="/static/images/logo.png" alt="Logo">
+        <ul class="menu">
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#projects">作品</a></li>
+            <li><a href="#contact">联系我</a></li>
+            <li><a href="templates/user/login.html">用户登录</a></li>
+            <li><a href="templates/user/register.html">用户注册</a></li>
+            <li><a href="templates/user/profile.html">用户个人资料</a></li>
+            <li><a href="templates/merchant/login.html">商家登录</a></li>
+            <li><a href="templates/merchant/register.html">商家注册</a></li>
+            <li><a href="templates/merchant/dashboard.html">商家仪表盘</a></li>
+            <li><a href="templates/merchant/menu.html">商家菜单</a></li>
+            <li><a href="templates/order/create.html">创建订单</a></li>
+            <li><a href="templates/order/detail.html">订单详情</a></li>
+            <li><a href="templates/order/history.html">订单历史</a></li>
+        </ul>
+        <h1>欢迎来到我的项目</h1>
+        <p id="about">感谢您访问我的项目！这是一个展示我的技能和作品的网站。</p>
+        <p>我是一个热爱编程和创造的开发者，擅长使用 Python、HTML、CSS 和 JavaScript 等技术进行开发。</p>
+        <p id="skills">通过这个项目，我展示了我在前端和后端开发方面的能力，以及数据库和用户认证等方面的知识。</p>
+        <p>我致力于不断学习和提升自己，为用户提供高质量、易用且具有良好用户体验的应用程序。</p>
+        <p id="projects" class="section-title">我的项目</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>项目</th>
+                    <th>描述</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background-color: #ff9999; color: #ffffff;">项目 1</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #99ccff; color: #ffffff;">项目 2</td>
+                    <td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #b3ffb3; color: #ffffff;">项目 3</td>
+                    <td>At vero eos et accusamus et iusto odio dignissimos ducimus.</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ffcc99; color: #ffffff;">项目 4</td>
+                    <td>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ff99cc; color: #ffffff;">项目 5</td>
+                    <td>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #66cc66; color: #ffffff;">项目 6</td>
+                    <td>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p id="contact" class="section-title">联系我</p>
+        <p>如果您对我的项目或我个人有任何疑问或合作意向，欢迎随时与我联系。</p>
+        <p>谢谢！</p>
+        <p class="contact-info">联系方式：邮箱 - developer@example.com | 手机 - 1234567890</p>
+    </div>
+</body>
+
+</html>

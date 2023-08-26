@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>订单详情</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #00b8ff, #003aff);
+            font-family: Arial, sans-serif;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* 添加两个立体图形 */
+        .shape1,
+        .shape2 {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: moveShape 3s infinite;
+        }
+
+        .shape1 {
+            background-color: yellow;
+            border-radius: 50%;
+        }
+
+        .shape2 {
+            background-color: cyan;
+            transform: rotate(45deg);
+        }
+
+        @keyframes moveShape {
+            0% {
+                transform: translate(-50%, -50%);
+            }
+            50% {
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+            100% {
+                transform: translate(-50%, -50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>订单详情</h1>
+    <div class="shape1"></div>
+    <div class="shape2"></div>
+    <!-- 在此处显示订单详情 -->
+</body>
+</html>

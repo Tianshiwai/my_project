@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Merchant Dashboard</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #4ecdc4, #2bcbba);
+            font-family: Arial, sans-serif;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #fff;
+            text-shadow: 2px 2px #333;
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        p {
+            margin-top: 10px;
+            color: #ccc;
+            font-size: 16px;
+        }
+        .animation-wrapper {
+            width: 400px;
+            height: 400px;
+            margin-top: 50px;
+            position: relative;
+            perspective: 800px;
+        }
+        .shape {
+            width: 200px;
+            height: 200px;
+            background-color: #f9ca24; /* 立体图形1颜色，亮黄色 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-style: preserve-3d;
+            animation: rotate 10s linear infinite; /* 无规则运动旋转 */
+            opacity: 0.8;
+        }
+        .shape.two {
+            background-color: #6ab04c; /* 立体图形2颜色，亮绿色 */
+            animation-direction: reverse;
+            animation-duration: 8s;
+            animation-delay: 2s;
+        }
+        .shape.three {
+            background-color: #3498db; /* 立体图形3颜色，亮蓝色 */
+            animation-direction: normal;
+            animation-duration: 5s;
+            animation-delay: 0s;
+        }
+        @keyframes rotate {
+            from { transform: translateZ(-100px) rotateX(0) rotateY(0); }
+            to { transform: translateZ(-100px) rotateX(360deg) rotateY(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <h1>欢迎使用商户仪表盘</h1>
+    <p>用户名：{{ username }}</p>
+    <p>电子邮件：{{ email }}</p>
+    <div class="animation-wrapper">
+        <div class="shape"></div>
+        <div class="shape two"></div>
+        <div class="shape three"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+    <style>
+        /* 添加自定义样式 */
+        body {
+            background: linear-gradient(to right, #00FFFF, #4169E1);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #FFFFFF;
+            font-size: 40px;
+            margin-top: 80px;
+            animation: pulse 1s infinite alternate;
+        }
+
+        p {
+            color: #FFFFFF;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .cube {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-style: preserve-3d;
+            animation: rotate 3s infinite linear;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: translateX(-50%) translateY(-50%) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+            100% {
+                transform: translateX(-50%) translateY(-50%) rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>欢迎来到你的用户资料页面</h1>
+    <div class="cube">
+        <div style="background-color: rgba(255, 255, 255, 0.3); width: 100px; height: 100px; transform: rotateX(45deg)"></div>
+        <div style="background-color: rgba(255, 255, 255, 0.3); width: 100px; height: 100px; transform: rotateY(45deg)"></div>
+    </div>
+    <p>用户名：<span style="color: #00FFFF;">{{ username }}</span></p>
+    <p>电子邮箱：<span style="color: #FF00FF;">{{ email }}</span></p>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>欢迎来到我的项目</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            color: #cccccc;
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            background-color: #333333;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .menu li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 0;
+            border-bottom: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .menu li a:hover {
+            background-color: #4d4d4d;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+            margin-bottom: 40px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 30px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        th {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        .table-header {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        .table-row:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .contact-info {
+            margin-top: 40px;
+            text-align: center;
+            color: #cccccc;
+        }
+
+        /* 新增的样式 */
+
+        .section-title::after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 50px;
+            background-color: #ffffff;
+            margin: 10px auto;
+        }
+
+        .highlight {
+            color: #ff6699;
+        }
+
+        .feature {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+
+        .feature-item {
+            background-color: #333333;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .feature-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .feature-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .feature-description {
+            color: #cccccc;
+        }
+
+        @media screen and (max-width: 600px) {
+            .menu {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 5px;
+                padding: 5px;
+            }
+
+            .logo {
+                width: 150px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Logo" class="logo">
+        <ul class="menu">
+            <li><a href="javascript:history.back()">返回</a></li>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#projects">作品</a></li>
+            <li><a href="#contact">联系我</a></li>
+            <li><a href="templates/user/login.html">用户登录</a></li>
+            <li><a href="templates/user/register.html">用户注册</a></li>
+            <li><a href="templates/user/profile.html">用户个人资料</a></li>
+            <li><a href="templates/merchant/login.html">商家登录</a></li>
+            <li><a href="templates/merchant/register.html">商家注册</a></li>
+            <li><a href="templates/merchant/dashboard.html">商家仪表盘</a></li>
+            <li><a href="templates/merchant/menu.html">商家菜单</a></li>
+            <li><a href="templates/order/create.html">创建订单</a></li>
+            <li><a href="templates/order/detail.html">订单详情</a></li>
+            <li><a href="templates/order/history.html">订单历史</a></li>
+        </ul>
+        <h1>欢迎来到我的项目</h1>
+        <p id="about">感谢您访问我的项目！这是一个展示我的技能和作品的网站。</p>
+        <p>我是一个<span class="highlight">热爱编程</span>和<span class="highlight">创造</span>的开发者，擅长使用<span class="highlight">Python</span>、<span class="highlight">HTML</span>、<span class="highlight">CSS</span>和<span class="highlight">JavaScript</span>等技术进行开发。</p>
+        <p id="skills">通过这个项目，我展示了我在前端和后端开发方面的能力，以及数据库和用户认证等方面的知识。</p>
+        <p>我致力于不断学习和提升自己，为用户提供高质量、易用且具有良好用户体验的应用程序。</p>
+        <p id="projects" class="section-title">我的项目</p>
+        <div class="table-container">
+
+                    <table>
+                <thead>
+                    <tr class="table-header">
+                        <th>项目名称</th>
+                        <th>描述</th>
+                        <th>技术栈</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-row">
+                        <td>项目 1</td>
+                        <td>这是我的第一个项目。</td>
+                        <td>HTML, CSS, JavaScript</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>项目 2</td>
+                        <td>这是我的第二个项目。</td>
+                        <td>Python, Django, PostgreSQL</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>项目 3</td>
+                        <td>这是我的第三个项目。</td>
+                        <td>React, Redux, Node.js</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p id="contact" class="section-title">联系我</p>
+        <p class="contact-info">如果您对我的项目感兴趣，或者有任何问题、建议或合作机会，请随时与我联系。</p>
+        <p class="contact-info">邮箱：info@example.com</p>
+        <p class="contact-info">电话：123-456-7890</p>
+    </div>
+</body>
+
+</html>

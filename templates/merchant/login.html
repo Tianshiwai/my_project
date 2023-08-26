@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Merchant Login</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #00b8ff, #003aff);
+            font-family: Arial, sans-serif;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #fff;
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            width: 200px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            outline: none;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #ffac41; /* 亮橙色 */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        input[type="submit"]:hover {
+            background-color: #ff942e; /* 深橙色 */
+        }
+        .shape {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.6);
+            animation: float 3s infinite;
+        }
+        .shape-1 {
+            top: 25%;
+            left: 20%;
+            border-radius: 50%;
+            transform: rotate(45deg);
+            animation-duration: 4s;
+        }
+        .shape-2 {
+            bottom: 20%;
+            right: 15%;
+            border-radius: 10px;
+            transform: rotate(-45deg);
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>商户登录</h1>
+    <form action="/merchant/login" method="POST">
+        <label for="username">用户名：</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">密码：</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="登录">
+    </form>
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+</body>
+</html>

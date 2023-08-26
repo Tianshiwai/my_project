@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户登录</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #00bfff, #00ced1, #2ecc71);
+            font-family: "微软雅黑", Arial, sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #fff;
+            text-shadow: 2px 2px #333;
+            margin-top: 50px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #ccc;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 300px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            color: #333;
+        }
+        input[type="submit"] {
+            background-color: #2ecc71;
+            color: #fff;
+            border: none;
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-left: 150px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 600px;
+            margin: 30px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f39c12;
+            color: #fff;
+        }
+        tr:nth-child(odd) {
+            background-color: #e67e22;
+        }
+        tr:hover {
+            background-color: #d35400;
+        }
+        .animation-container {
+            width: 100%;
+            height: 300px;
+            margin: 30px auto;
+            perspective: 1000px;
+            perspective-origin: 50% 50%;
+            position: relative;
+            overflow: hidden;
+        }
+        .animation {
+            width: 300px;
+            height: 200px;
+            position: absolute;
+            transform-style: preserve-3d;
+            top: 0;
+            left: 50%;
+            margin-left: -150px;
+            animation-duration: 5s;
+            animation-name: rotate;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        .face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.8);
+            line-height: 200px;
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .front {
+            transform: rotateY(0) translateZ(100px);
+        }
+        .back {
+            transform: rotateY(180deg) translateZ(100px);
+        }
+        .right {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .left {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .top {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .bottom {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotateY(0);
+            }
+            100% {
+                transform: rotateY(1turn);
+            }
+        }
+        .long-content {
+            margin: 30px auto;
+            width: 600px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>用户登录</h1>
+    <form action="/user/login" method="POST" style="margin: 0 auto; width: 300px;">
+        <label for="username">用户名：</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">密码：</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="登录">
+    </form>
+    <div class="animation-container">
+        <div class="animation">
+            <div class="cube">
+                <div class="face front">正面1</div>
+                <div class="face back">背面1</div>
+                <div class="face right">右侧1</div>
+                <div class="face left">左侧1</div>
+                <div class="face top">顶部1</div>
+                <div class="face bottom">底部1</div>
+            </div>
+        </div>
+    </div>
+    <div class="animation-container">
+        <div class="animation">
+            <div class="cube">
+                <div class="face front">正面2</div>
+                <div class="face back">背面2</div>
+                <div class="face right">右侧2</div>
+                <div class="face left">左侧2</div>
+                <div class="face top">顶部2</div>
+                <div class="face bottom">底部2</div>
+            </div>
+        </div>
+    </div>
+    <div class="animation-container">
+        <div class="animation">
+            <div class="cube">
+                <div class="face front">正面3</div>
+                <div class="face back">背面3</div>
+                <div class="face right">右侧3</div>
+                <div class="face left">左侧3</div>
+                <div class="face top">顶部3</div>
+                <div class="face bottom">底部3</div>
+            </div>
+        </div>
+    </div>
+    <div class="animation-container">
+        <div class="animation">
+            <div class="cube">
+                <div class="face front">正面4</div>
+                <div class="face back">背面4</div>
+                <div class="face right">右侧4</div>
+                <div class="face left">左侧4</div>
+                <div class="face top">顶部4</div>
+                <div class="face bottom">底部4</div>
+            </div>
+        </div>
+    </div>
+    <div class="animation-container">
+        <div class="animation">
+            <div class="cube">
+                <div class="face front">正面5</div>
+                <div class="face back">背面5</div>
+                <div class="face right">右侧5</div>
+                <div class="face left">左侧5</div>
+                <div class="face top">顶部5</div>
+                <div class="face bottom">底部5</div>
+            </div>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>25</td>
+            <td>男</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>30</td>
+            <td>女</td>
+        </tr>
+    </table>
+    <div class="long-content">
+
+        <h2>这是很长的内容标题</h2>
+        <p>这是很长的内容段落，你可以在这里随意添加文字和其他元素。</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in quam arcu. Mauris vehicula velit ut libero ultricies, non volutpat nibh bibendum. Sed at aliquam eros, sed faucibus nulla. Aliquam ullamcorper tempor mauris quis egestas. Fusce aliquam mollis interdum. Donec a scelerisque augue. Proin efficitur auctor dapibus.</p>
+        <p>Nullam sed gravida ante, nec semper urna. Sed ac tortor a lacus maximus gravida et vitae enim. Aenean convallis purus eu lorem dictum euismod. In vehicula mauris nec enim rutrum tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec ornare ac enim sit amet congue. Etiam ullamcorper, lacus nec volutpat suscipit, nibh justo fermentum eros, at interdum nunc lectus sit amet tortor.</p>
+        <p>Morbi lobortis massa eget elit cursus, vitae elementum mauris tincidunt. Praesent facilisis venenatis turpis id posuere. Mauris vitae vestibulum urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec pulvinar justo eget erat tempus vulputate. Etiam eu est sagittis, tincidunt metus eget, congue risus. Sed magna neque, efficitur vel felis sed, eleifend malesuada mi.</p>
+    </div>
+</body>
+</html>
